@@ -30,12 +30,11 @@
 
     main {
         display: flex;
-        padding: 0 0.5em 1.8em 1.5em;
+        padding: 0 0 1.4em 1.5em;
         flex-direction: column;
         align-items: flex-start;
         text-align: start;
         gap: 1em;
-        text-overflow: ellipsis;
 
         p {
             &:first-child {
@@ -70,10 +69,12 @@
         div {
             display: flex;
             align-items: center;
-            gap: 0.5em;
+            gap: 0.8em;
+            transform: translateY(15%);
             img {
                 height: 2em;
                 width: 2em;
+                filter: grayscale(.5);
             }
             span {
                 font-weight: 800;
