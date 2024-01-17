@@ -1,0 +1,129 @@
+@import "variables.scss";
+
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1em;
+    border: 2px solid $Black;
+    background-color: $White;
+    font-size: 1rem;
+    box-shadow: 8px 9px 0 0 $Black;
+    max-width: 24.5em;
+    transition: box-shadow 300ms ease;
+    position: relative;
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    header {
+        padding: 1.5rem 1.5rem;
+        width: 100%;
+        img {
+            width: 100%;
+            border-radius: 0.6em;
+        }
+    }
+
+    main {
+        display: flex;
+        padding: 0 0.5em 1.8em 1.5em;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+        gap: 1em;
+        text-overflow: ellipsis;
+
+        p {
+            &:first-child {
+                font-weight: 800;
+                padding: 0.5em 0.8rem;
+                background-color: $Yellow;
+                border-radius: 0.3em;
+            }
+            &:nth-child(4) {
+                color: $Grey;
+                font-weight: 600;
+                line-height: 1.5;
+            }
+        }
+
+        small {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        h1 {
+            font-size: 1.48rem;
+            transition: color 200ms ease;
+            &:hover {
+                cursor: pointer;
+                color: $Yellow;
+            }
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            img {
+                height: 2em;
+                width: 2em;
+            }
+            span {
+                font-weight: 800;
+            }
+        }
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 45em) {
+    .mainSection {
+        transition: box-shadow 300ms ease;
+        position: relative;
+
+        &:hover {
+            box-shadow: 120px 9px 0 0 $Black;
+            footer {
+                transition: opacity 300ms ease;
+                transition-delay: 300ms;
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3em;
+            padding: 0 1em;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateX(100%) translateY(-50%);
+            opacity: 0;
+            scale: 0;
+            font-size: 0.8rem;
+            height: 100%;
+            p {
+                color: $White;
+            }
+            a {
+                text-decoration: none;
+                color: $Yellow;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
